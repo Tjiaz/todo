@@ -1,0 +1,97 @@
+body {
+  background-color: #272935;
+  color: aquamarine;
+}
+* {
+  box-sizing: border-box;
+}
+
+main {
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+.task {
+  background-color: #30313d;
+  border-radius: 10px;
+  padding: 5px 8px;
+  margin-top: 5px;
+  display: flex;
+  transition: opacity 0.3s linear;
+  align-items: center;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  margin-right: 6px;
+  color: aquamarine;
+}
+form {
+  border: 3px solid #303130;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+}
+
+form input[type="text"] {
+  background: none;
+  border: 0;
+  padding: 0 8px;
+  display: block;
+  width: 100%;
+  color: #fff;
+}
+
+form button {
+  background-color: rgb(41, 212, 212);
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.task.done {
+  opacity: 0.3;
+}
+
+.task span {
+  position: relative;
+}
+.taskname,
+.task form {
+  flex-grow: 1;
+}
+.task span:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color: #ddd;
+
+  position: absolute;
+  top: 10px;
+  transition: width 0.1s linear;
+}
+
+.task.done span:before {
+  width: 100%;
+}
+
+h1 h2 {
+  text-align: center;
+}
+
+.trash {
+  background: none;
+  border: none;
+  color: rgb(140, 43, 43);
+  cursor: pointer;
+  display: flex;
+}
+
+/* .task input { 
+  border: 2px solid blue;
+  border-radius: 5px;
+  padding: 2px 4px;
+} */
